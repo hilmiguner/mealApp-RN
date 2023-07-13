@@ -130,3 +130,5 @@ task wrapper(type: Wrapper){
 task prepareKotlinBuildScriptModel {
 
 }
+
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
