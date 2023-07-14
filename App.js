@@ -1,3 +1,5 @@
+import 'react-native-gesture-handler';
+
 import { StatusBar, Text, View } from 'react-native';
 
 import CategoriesScreen from './screens/CategoriesScreen';
@@ -7,8 +9,21 @@ import MealDetailsScreen from './screens/MealDetailsScreen';
 import { NavigationContainer } from '@react-navigation/native';
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
 const Stack = createNativeStackNavigator();
+const Drawer = createDrawerNavigator();
+
+function DrawerNavigator() {
+  return(
+    <Drawer.Navigator>
+      <Drawer.Screen
+      name='Categories'
+      component={CategoriesScreen}
+      />
+    </Drawer.Navigator>
+  );
+}
 
 function App() {
   return (
@@ -22,17 +37,11 @@ function App() {
         }}>
           <Stack.Screen 
           name='MealCategories' 
-          component={CategoriesScreen} 
-          options={{ title: "Meal Categories" }}
+          component={DrawerNavigator} 
           />
           <Stack.Screen 
           name='MealOverviews' 
           component={MealOverviewsScreen}
-          // DYNAMIC OPTIONS
-          // options={({ route, navigation }) => {
-          //   const categoryTitle = route.params.categoryTitle;
-          //   return { title: categoryTitle };
-          // }}
           />
           <Stack.Screen
           name='MealDetails'
