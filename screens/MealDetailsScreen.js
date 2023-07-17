@@ -1,4 +1,4 @@
-import { Text, View, Image, StyleSheet, ScrollView, Button } from "react-native";
+import { Text, View, Image, StyleSheet, ScrollView } from "react-native";
 
 import { useContext, useLayoutEffect } from "react";
 

@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 
-import { StatusBar, Text, View } from 'react-native';
+import { StatusBar } from 'react-native';
 
 import CategoriesScreen from './screens/CategoriesScreen';
 import MealOverviewsScreen from './screens/MealOverviewsScreen';
